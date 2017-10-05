@@ -1,0 +1,4 @@
+venv
+.pyc
+postgres-data
+.idea
