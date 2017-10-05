@@ -43,10 +43,8 @@ def list_course(id):
     one_course = Course.query.filter_by(id=id).first()
     return "{0} starts on {1}".format(one_course.CourseName , one_course.CourseStartDate)
 
-def create_app(cfg=None):
-    if cfg is None:
-        app.config.from_object(ProductionConfig)
-    elif cfg == "Development":
+def create_app():
+    if (os.getenv("DEBUG", "True") == "True"):
         app.config.from_object(DevelopmentConfig)
     else:
         app.config.from_object(ProductionConfig)
