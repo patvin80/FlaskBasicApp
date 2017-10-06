@@ -21,7 +21,7 @@ db.create_all()
 
 @app.route('/')
 def hello_world():
-    return 'Hello World Debugging'
+    return 'Hello World Debugging Changed 123'
 
 @app.route('/insert/<coursename>')
 def insert_course(coursename):

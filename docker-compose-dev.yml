@@ -1,0 +1,25 @@
+version: '2'
+services:
+  db:
+    image: "postgres:9.4"
+    volumes:
+      - ./postgres-data:/var/lib/postgresql/data
+    expose:
+      - 5432
+    environment:
+      - POSTGRES_USER=test
+      - POSTGRES_PASSWORD=test
+      - POSTGRES_DB=test_db
+  web:
+    build:
+      context: .
+      dockerfile: Dockerfile-dev
+    ports:
+     - "4444:80"
+    volumes:
+     - .:/app
+    links: 
+      - db
+    environment: 
+      DEBUG: "True"
+      SECRET_KEY: "abcde"
