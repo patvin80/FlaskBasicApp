@@ -14,7 +14,11 @@ A  Basic Flask App with Models and Docker Container defined
 5.3. Setup Config so that the config can have inheritance
 5.4. Include the config and do Import
 5.5. Now we have a way to configure whether the app will run in Dev config or Production Config
+5.6. Adding a Test Case
+5.6.1. Making sure that the pytest and pytest-Flask and Flask-testing are in the requirements
+5.6.2. py.test can be used to execute the test cases.
 6. Lets Talk about AWS Code Star a Cool way to get your app to the Cloud and watch it being continuously being deployed in a CD Fashion
+6.0. Show the AWS Codestar Environment and all the configurations for the same.
 6.1. Navigate to the AWS Code Star Folder - Visual Studio Code
 6.2. Login into the AWS Console as VinitPat
 6.3. Make a Change and push the change in GIT

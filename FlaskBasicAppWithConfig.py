@@ -5,6 +5,11 @@ from config import ProductionConfig, DevelopmentConfig
 import os
 
 app = Flask(__name__)
+#################
+# Configuration is based upon the Environment Variables
+# export DEBUG = True
+# echo $DEBUG
+#################
 if (os.getenv("DEBUG", "True") == "True"):
     app.config.from_object(DevelopmentConfig)
 else:
@@ -14,6 +19,7 @@ db = SQLAlchemy(app)
 
 ##########################
 # Models are now moved to a different file
+# Models have to be imported after the DB is initialized by the App
 ##########################
 from models import *
 
@@ -43,6 +49,9 @@ def list_course(id):
     one_course = Course.query.filter_by(id=id).first()
     return "{0} starts on {1}".format(one_course.CourseName , one_course.CourseStartDate)
 
+#######################
+# Helper for the Py Test to work.
+#######################
 def create_app():
     if (os.getenv("DEBUG", "True") == "True"):
         app.config.from_object(DevelopmentConfig)
