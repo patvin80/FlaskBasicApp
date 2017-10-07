@@ -5,9 +5,9 @@ A  Basic Flask App with Models and Docker Container defined
 2. Show the creation of a model
 3. Show the db.create_all() mechanism
 4. python FlaskBasicApp.py -- Brings up a server and runs the app at 127.0.0.1:5000
-4.1. Notice the test.db file being created
-4.2. Navigate through the Routes so that the Courses are Created and Courses are listed
-4.3. Talk about Templates and the Static Folder
+.. 1. Notice the test.db file being created
+.. 2. Navigate through the Routes so that the Courses are Created and Courses are listed
+.. 3. Talk about Templates and the Static Folder
 5. Now lets create a more involved Flask App with some modifications
 5.1. Move the models to a different file
 5.2. Import the file using the from models import * syntax
